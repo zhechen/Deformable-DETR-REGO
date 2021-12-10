@@ -5,7 +5,7 @@ By [Zhe Chen](https://scholar.google.cz/citations?user=Jgt6vEAAAAAJ&hl),  [Jing 
 This repository is the implementation of the paper [Recurrent Glimpses-based Decoder for Detection with Transformer](https://arxiv.org/abs/2010.04159).
 
 ## TODO
-1. Release paper
+1. Release paper (finished)
 
 2. Revise README
 
