@@ -2,7 +2,7 @@
 
 By [Zhe Chen](https://scholar.google.cz/citations?user=Jgt6vEAAAAAJ&hl),  [Jing Zhang](https://scholar.google.com/citations?user=9jH5v74AAAAJ&hl), and [Dacheng Tao](https://scholar.google.com/citations?user=RwlJNLcAAAAJ&hl).
 
-This repository is the implementation of the paper [Recurrent Glimpses-based Decoder for Detection with Transformer](https://arxiv.org/abs/2112.04632).
+This repository is the implementation of the paper [Recurrent Glimpse-based Decoder for Detection with Transformer](https://arxiv.org/abs/2112.04632).
 
 ## TODO
 1. Release paper (finished)
