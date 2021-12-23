@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -x
+
+EXP_DIR=exps/r50_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_rego_2
+PY_ARGS=${@:1}
+
+python -u main.py \
+    --output_dir ${EXP_DIR} \
+    --use_rego \
+    --with_box_refine \
+    --two_stage \
+    ${PY_ARGS}
