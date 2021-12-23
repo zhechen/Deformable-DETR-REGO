@@ -43,12 +43,12 @@ If you find REGO useful in your research, please consider citing:
 ## Main Results
 
 | <sub><sub>Method</sub></sub>   | <sub><sub>Epochs</sub></sub> | <sub><sub>AP</sub></sub> | <sub><sub>AP<sub>S</sub></sub></sub> | <sub><sub>AP<sub>M</sub></sub></sub> | <sub><sub>AP<sub>L</sub></sub></sub> | <sub><sub>FLOPs<br>(G)</sub></sub> | <sub><sub>URL</sub></sub>                     |
-| ----------------------------------- | :----: | :--: | :----: | :---: | :------------------------------: | ----- | ----- |
+| ----------------------------------- | :----: | :--: | :----: | :---: | :---------------------: | ----- | ----- |
 | <sub><sub>Faster R-CNN + FPN</sub></sub> | <sub>109</sub> | <sub>42.0</sub> | <sub>26.6</sub> | <sub>45.4</sub> | <sub>53.4</sub> |<sub>180</sub> | <sub>-</sub> |
-| <sub><sub>Deformable DETR</sub></sub> | <sub>50</sub> | <sub>44.5</sub> | <sub>27.1</sub> | <sub>47.6</sub> | <sub>59.6</sub> | <sub>180</sub> | <sub>[config](./configs/r50_deformable_detr.sh)<br/>[log](https://drive.google.com/file/d/18YSLshFjc_erOLfFC-hHu4MX4iyz1Dqr/view?usp=sharing)</sub>                   |
+| <sub><sub>Deformable DETR</sub></sub> | <sub>50</sub> | <sub>44.5</sub> | <sub>27.1</sub> | <sub>47.6</sub> | <sub>59.6</sub> | <sub>180</sub> | <sub>[config](./configs/r50_deformable_detr.sh)<br/>[log](https://drive.google.com/file/d/18YSLshFjc_erOLfFC-hHu4MX4iyz1Dqr/view?usp=sharing)</sub>  |
 | <sub><sub>Deformable DETR ** </sub></sub> | <sub>50</sub> | <sub>46.2</sub> | <sub>28.3</sub> | <sub>49.2</sub> | <sub>61.5</sub> | <sub>173</sub>| <sub>[config](./configs/r50_deformable_detr_plus_iterative_bbox_refinement.sh)<br/>[log](https://drive.google.com/file/d/1DFNloITi1SFBWjYzvVEAI75ndwmGM1Uj/view?usp=sharing)</sub> |
-| **<sub><sub>REGO-Deformable DETR</sub></sub>** | <sub>50</sub> | <sub>45.9</sub> | <sub>27.6</sub> | <sub>48.9</sub> | <sub>61.5</sub> | <sub>190</sub> | <sub>[config](./configs/r50_deformable_detr-rego.sh)<br/>[log](https://drive.google.com/file/d/1ooPQkqkeFCinbpHmwIbH13B6lIxqfKfN/view?usp=sharing)</sub>                   |
-| **<sub><sub>REGO-Deformable DETR ** </sub></sub>** | <sub>50</sub> | <sub>47.6</sub> | <sub>29.6</sub> | <sub>50.6</sub> | <sub>62.3</sub> | <sub>190</sub>|<sub>325</sub>|<sub>6.5</sub>|<sub>15.0</sub>|<sub>19.4</sub>|<sub>[config](./configs/r50_deformable_detr_plus_iterative_bbox_refinement-rego.sh)<br/>[log](https://drive.google.com/file/d/1OKljwcSUmTvQvWHYGns-HJfA6v7qGTX4/view?usp=sharing)</sub> |
+| **<sub><sub>REGO-Deformable DETR</sub></sub>** | <sub>50</sub> | <sub>45.9</sub> | <sub>27.6</sub> | <sub>48.9</sub> | <sub>61.5</sub> | <sub>190</sub> | <sub>[config](./configs/r50_deformable_detr-rego.sh)<br/>[log](https://drive.google.com/file/d/1ooPQkqkeFCinbpHmwIbH13B6lIxqfKfN/view?usp=sharing)</sub> |
+| **<sub><sub>REGO-Deformable DETR ** </sub></sub>** | <sub>50</sub> | <sub>47.6</sub> | <sub>29.6</sub> | <sub>50.6</sub> | <sub>62.3</sub> | <sub>190</sub>|<sub>[config](./configs/r50_deformable_detr_plus_iterative_bbox_refinement-rego.sh)<br/>[log](https://drive.google.com/file/d/1OKljwcSUmTvQvWHYGns-HJfA6v7qGTX4/view?usp=sharing)</sub> |
 
 *Note:*
 
