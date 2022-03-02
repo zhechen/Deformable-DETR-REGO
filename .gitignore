@@ -1,0 +1,11 @@
+*.ipynb
+*.pyc
+.dumbo.json
+.DS_Store
+.*.swp
+*.pth
+*.tmp
+*.pkl
+data
+logs/
+exps/
