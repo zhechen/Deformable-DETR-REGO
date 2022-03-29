@@ -43,7 +43,7 @@ If you find REGO useful in your research, please consider citing:
 
 1. **: Refine with two-stage Deformable DETR and iterative bounding box refinement.
 
-2. I have cleaned up the code and made some minor adjustments: Instead of using concatenated decoding results of the previous stage as key/value, this code uses glimpse decoding results of the previous stage as the key/value in the decoder. I have re-trained the models and obtain slightly better performance than what the paper reports.
+2. I have cleaned up the code and made some minor adjustments: Instead of using concatenated decoding results of the previous stage as key/value, this code uses glimpse decoding results of the previous stage as the key/value in the decoder. I have re-trained the models and obtained slightly better performance than what the paper reports.
 
 
 ## Installation
