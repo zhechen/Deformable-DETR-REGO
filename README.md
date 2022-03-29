@@ -1,4 +1,4 @@
-# REGO-Deformable DETR (Accepted in CVPR2022)
+# REGO-Deformable DETR (Accepted as ORAL in CVPR2022)
 
 By [Zhe Chen](https://scholar.google.cz/citations?user=Jgt6vEAAAAAJ&hl),  [Jing Zhang](https://scholar.google.com/citations?user=9jH5v74AAAAJ&hl), and [Dacheng Tao](https://scholar.google.com/citations?user=RwlJNLcAAAAJ&hl).
 
