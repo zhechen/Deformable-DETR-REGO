@@ -6,6 +6,7 @@
 *.pth
 *.tmp
 *.pkl
+*.out
 data
 logs/
 exps/

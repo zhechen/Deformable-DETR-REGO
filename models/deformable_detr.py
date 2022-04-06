@@ -156,6 +156,11 @@ class DeformableDETR(nn.Module):
                 else:
                     setattr(self, 'glimpse_transformer_%d'%gi, copy.deepcopy(glimpse_transformer))
 
+                rego_hs_linear = nn.Linear((gi+1) * hidden_dim, hidden_dim, bias=False)
+                rego_hs_linear_norm = nn.LayerNorm(hidden_dim)
+                setattr(self, 'rego_hs_linear_%d'%gi, rego_hs_linear)
+                setattr(self, 'rego_hs_linear_norm_%d'%gi, rego_hs_linear_norm)
+
                 rego_hs_fuser = nn.Linear((gi+2) * hidden_dim, hidden_dim, bias=False)
                 setattr(self, 'rego_hs_fuser_%d'%gi, _get_clones(rego_hs_fuser, num_pred))
                 setattr(self, 'layer_norms_%d'%gi, nn.ModuleList([nn.LayerNorm(hidden_dim) for i in range(num_pred)]))
@@ -290,8 +295,7 @@ class DeformableDETR(nn.Module):
                     im_shape_tensor[bi, 0, 1::2] = im_shapes[bi][0]
 
             hidden_dim = hs.size(3)
-            prev_hs = hs[-1]
-            prev_pred_hs = hs[-1]
+            prev_dec_hs = hs[-1]
             prev_coord = outputs_coord[-1].detach()
             for gi in range(len(self.rego_scales)):
                 with torch.no_grad():
@@ -307,6 +311,9 @@ class DeformableDETR(nn.Module):
                 ext_roi_feat = getattr(self, 'rcnn_net_%d'%gi)(ext_roi_feat) 
                 rego_in = ext_roi_feat.view(batch_num, -1, self.roi_query_dim) 
 
+                prev_hs = getattr(self, 'rego_hs_linear_%d'%gi)(prev_dec_hs)
+                prev_hs = getattr(self, 'rego_hs_linear_norm_%d'%gi)(prev_hs)
+
                 rego_hs = getattr(self, 'glimpse_transformer_%d'%gi)(rego_in, prev_hs)[0] # NL(6) x N x Q x d 
                 #rego_hs = getattr(self, 'glimpse_transformer_%d'%gi)(prev_hs, rego_in)[0] # NL(6) x N x Q x d 
 
@@ -317,8 +324,8 @@ class DeformableDETR(nn.Module):
                 l_norms = getattr(self, 'layer_norms_%d'%gi)
                 class_embeds = getattr(self, 'rego_class_embed_%d'%gi)
                 bbox_embeds = getattr(self, 'rego_bbox_embed_%d'%gi)
+                prev_h = prev_dec_hs.detach() 
                 for lvl in range(rego_hs.shape[0]):
-                    prev_h = prev_pred_hs.detach() 
                     fuse_h = torch.cat((prev_h, rego_hs[lvl]), 2) 
                     fuse_h = hs_fusers[lvl](fuse_h) 
                     fuse_h = l_norms[lvl](fuse_h)
@@ -339,8 +346,7 @@ class DeformableDETR(nn.Module):
                     box_aux = self._set_rego_aux_loss(rego_output_classes, rego_output_coords, prefix='_rego_%d'%gi)
                     out['aux_outputs'] += box_aux
 
-                prev_hs = rego_hs[-1]
-                prev_pred_hs = torch.cat( (prev_pred_hs, rego_hs[-1]), 2)
+                prev_dec_hs = torch.cat( (prev_dec_hs, rego_hs[-1]), 2)
                 prev_coord = rego_output_coords[-1].detach()
         return out
 
