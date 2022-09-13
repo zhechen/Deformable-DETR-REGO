@@ -23,11 +23,12 @@ This project is released under the [Apache 2.0 license](./LICENSE).
 ## Citing Deformable DETR
 If you find REGO useful in your research, please consider citing:
 ```bibtex
-@article{chen2021recurrent,
-  title={Recurrent Glimpse-based Decoder for Detection with Transformer},
+@inproceedings{chen2022recurrent,
+  title={Recurrent glimpse-based decoder for detection with transformer},
   author={Chen, Zhe and Zhang, Jing and Tao, Dacheng},
-  journal={arXiv preprint arXiv:2112.04632},
-  year={2021}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={5260--5269},
+  year={2022}
 }
 ```
 
