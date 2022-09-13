@@ -1,6 +1,5 @@
 # REGO-Deformable DETR (Accepted as ORAL in CVPR2022)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/recurrent-glimpse-based-decoder-for-detection/object-detection-on-coco-1)](https://paperswithcode.com/sota/object-detection-on-coco-1?p=recurrent-glimpse-based-decoder-for-detection)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/recurrent-glimpse-based-decoder-for-detection/object-detection-on-coco-minival)](https://paperswithcode.com/sota/object-detection-on-coco-minival?p=recurrent-glimpse-based-decoder-for-detection)
 
 By [Zhe Chen](https://scholar.google.cz/citations?user=Jgt6vEAAAAAJ&hl),  [Jing Zhang](https://scholar.google.com/citations?user=9jH5v74AAAAJ&hl), and [Dacheng Tao](https://scholar.google.com/citations?user=RwlJNLcAAAAJ&hl).
 
