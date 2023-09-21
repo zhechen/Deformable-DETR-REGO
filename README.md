@@ -43,6 +43,8 @@ If you find REGO useful in your research, please consider citing:
 
 *Note:*
 
+Update: Sorry that the log files and checkpoints were lost when I finished my post-doctoral position. The data and the original project were stored on the dropbox supported by the previous university, and I forgot to transfer them. In principle, using the code of this project should reproduce the results. 
+
 1. **: Refine with two-stage Deformable DETR and iterative bounding box refinement.
 
 2. I have cleaned up the code. I have re-trained the models and obtained slightly better performance than what the paper reports.
